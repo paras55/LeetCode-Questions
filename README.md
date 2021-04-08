@@ -1,7 +1,7 @@
 # LeetCode-Questions
 
-### Start Project
+### Topice to study
 
 ```md
-django-admin startproject DRT
+Trees , Breadth first search , Depth first Search , LinkedIn List , Vectors 
 ```
