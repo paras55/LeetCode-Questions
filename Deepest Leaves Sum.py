@@ -4,15 +4,13 @@
 #         self.val = val
 #         self.left = left
 #         self.right = right
-
-
 class Solution:
     def __init__(self):
         self.sum=0
-        self.le=1
+        self.le=0
         self.ri=1
         self.heigh=0
-    def height(self,root):  #height calculation of tree
+    def height(self,root):
         if root is None:
             return 0
         p=self.height(root.left)
@@ -22,18 +20,20 @@ class Solution:
     
     def deepestLeavesSum(self, root: TreeNode) -> int:
         if root is not None:
-            print(root.val,self.ri)
+            print(root.val,self.le)
+            self.le=self.le+1
             check=self.height(root)
+            print(check)
             if check >self.heigh:
                 self.heigh=check
-            if root.left==None and root.right==None and (self.le==self.heigh or self.ri==self.heigh):
+            if root.left==None and root.right==None and (self.le==self.heigh ):
                 self.sum=self.sum+root.val
-            self.le=self.le+1
-            
-            l=self.deepestLeavesSum(root.left)
-            self.le=0
-            self.ri=self.ri+1
-            r=self.deepestLeavesSum(root.right)
+            if root.left is not None:
+                l=self.deepestLeavesSum(root.left)
+                self.le=self.le-1
+            if root.right is not None:
+                r=self.deepestLeavesSum(root.right)
+                self.le=self.le-1
             return self.sum                                            
             
             
