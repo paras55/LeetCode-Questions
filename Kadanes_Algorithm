@@ -1,0 +1,23 @@
+#https://www.youtube.com/watch?v=HCL4_bOd3-4&ab_channel=AnujBhaiya
+#https://leetcode.com/problems/maximum-subarray/
+
+
+class Solution:
+    def maxSubArray(self, nums: List[int]) -> int:
+        if len(nums)>0:
+            p=len(nums)
+            neg=True
+            maxsum=0
+            cursum=0
+            for ele in nums:
+                if ele>0:
+                    neg=False
+                cursum=cursum+ele
+                if cursum>maxsum:
+                    maxsum=cursum
+                if cursum<0:
+                    cursum=0
+            if neg==True:
+                return max(nums)
+            return maxsum
+        
