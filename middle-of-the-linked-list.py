@@ -5,6 +5,7 @@
 #         self.next = next
 
 #https://leetcode.com/problems/middle-of-the-linked-list/
+#https://www.youtube.com/watch?v=_49oLk6CJ-s
 
 class Solution:
     def middleNode(self, head: ListNode) -> ListNode:
