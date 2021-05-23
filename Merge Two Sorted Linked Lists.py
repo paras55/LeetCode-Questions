@@ -1,9 +1,11 @@
 # Definition for singly-linked list.
-# https://leetcode.com/problems/merge-two-sorted-lists/
 # class ListNode:
 #     def __init__(self, val=0, next=None):
 #         self.val = val
 #         self.next = next
+
+#https://www.youtube.com/watch?v=OXmaACquVsY
+
 class Solution:
     def mergeTwoLists(self, l1: ListNode, l2: ListNode) -> ListNode:
         head=ListNode()
@@ -23,7 +25,7 @@ class Solution:
         if l2:
             head.next=l2
             
-        return dummy.next
+        return dummy.next #since head ke pehle node ko point karva rahe hain kyuki vo khud apne pehle node ko point ni kar sakta 
                 
                     
 
