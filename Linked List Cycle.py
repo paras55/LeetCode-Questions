@@ -30,4 +30,21 @@ class Solution:
                 return True
             itr=itr.next
         return False
+    
+#Solution3 (best)
+
+
+def hasCycle(self, head: ListNode) -> bool:
+	if not head:
+		return False
+	slowPointer = head
+	fastPointer = head.next
+	cycleExists =  False
+	while fastPointer:
+		if slowPointer == fastPointer:
+			cycleExists = True
+			break
+		slowPointer = slowPointer.next
+		fastPointer = fastPointer.next.next if fastPointer.next else fastPointer.next
+	return cycleExists
             
