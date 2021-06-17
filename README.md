@@ -1,7 +1,8 @@
 # LeetCode-Questions
 
-### Topice to study
+### Algorithms Studied
 
 ```md
-Trees , Breadth first search , Depth first Search , LinkedIn List , Vectors 
+Bullet Seive of Erathosthenes - An algorithm to count prime numbers less than a given number
+Bullet Kadane's Algorithm - maximum sum subarray
 ```
